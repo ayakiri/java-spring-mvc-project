@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Show Vehicle Ads</title>
+        <link th:href="@{/style.css}" rel="stylesheet">
+    </head>
+
+    <body>
+        <div th:insert="headers.html::menu"> </div>
+
+        <h2>Vehicle Ads</h2>
+        <br />
+
+        <table>
+            <tbody>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Make</th>
+                    <th>Description</th>
+                    <th>Contact Information</th>
+                    <th>Price [$]</th>
+                </tr>
+                <tr th:each="car : ${cars}">
+                    <td th:text="${car.id}">. </td>
+                    <td th:text="${car.name}"></td>
+                    <td th:text="${car.make}"></td>
+                    <td th:text="${car.description}"></td>
+                    <td th:text="${car.contactInfo}"></td>
+                    <td th:text="${car.price}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

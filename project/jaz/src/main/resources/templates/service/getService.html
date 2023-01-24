@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Show Service Ads</title>
+        <link th:href="@{/style.css}" rel="stylesheet">
+    </head>
+
+    <body>
+        <div th:insert="headers.html::menu"> </div>
+
+        <h2>Services</h2>
+        <br />
+
+        <table>
+            <tbody>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Payment [$]</th>
+            </tr>
+            <tr th:each="service : ${services}">
+                <td th:text="${service.id}">. </td>
+                <td th:text="${service.name}"></td>
+                <td th:text="${service.description}"></td>
+                <td th:text="${service.payment}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

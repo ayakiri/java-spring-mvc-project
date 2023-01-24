@@ -1,0 +1,27 @@
+<div th:fragment="menu">
+    <hr />
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Services: </th>
+                <td><a th:href="@{/buy/services}"/> Show Service Offers </td>
+                <td><a th:href="@{/buy/services/add}"/> Add Service Offer </td>
+                <td><a th:href="@{/buy/services/delete}"/> Delete Service Offer </td>
+            </tr>
+            <tr>
+                <th>Jobs: </th>
+                <td><a th:href="@{/buy/jobs}"/> Show Job Ads </td>
+                <td><a th:href="@{/buy/jobs/add}"/> Add Job Ad </td>
+                <td><a th:href="@{/buy/jobs/delete}"/> Delete Job Ad </td>
+            </tr>
+            <tr>
+                <th>Vehicles: </th>
+                <td><a th:href="@{/buy/vehicles/cars}"/> Show Vehicle Ads </td>
+                <td><a th:href="@{/buy/vehicles/car/add}"/> Add Vehicle Ad </td>
+                <td><a th:href="@{/buy/vehicles/car/delete}"/> Delete Vehicle Ad </td>
+            </tr>
+        </tbody>
+    </table>
+    <hr />
+</div>

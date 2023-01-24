@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Delete Job Ad</title>
+        <link th:href="@{/style.css}" rel="stylesheet">
+    </head>
+
+    <body>
+        <div th:insert="headers.html::menu"> </div>
+
+        <h2>Delete Job Ad</h2>
+        <br />
+
+        <form method="post" action="#" th:action="@{/buy/jobs/delete}">
+            <table>
+                <tr>
+                    <td>Job ad Id:</td>
+                    <td><input type="text" th:field="${job.id}" /></td>
+                </tr>
+                <tr>
+                    <td>Submit:</td>
+                    <td><input type="submit" value="Submit" /></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

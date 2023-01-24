@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Delete Vehicle Ad</title>
+        <link th:href="@{/style.css}" rel="stylesheet">
+    </head>
+
+    <body>
+        <div th:insert="headers.html::menu"> </div>
+
+        <h2>Delete Vehicle Ad</h2>
+        <br />
+
+        <form method="post" action="#" th:action="@{/buy/vehicles/car/delete}">
+            <table>
+                <tr>
+                    <td>Vehicle ad Id:</td>
+                    <td><input type="text" th:field="${car.id}" /></td>
+                </tr>
+                <tr>
+                    <td>Submit:</td>
+                    <td><input type="submit" value="Submit" /></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Add Service Offer</title>
+        <link th:href="@{/style.css}" rel="stylesheet">
+    </head>
+
+    <body>
+        <div th:insert="headers.html::menu"> </div>
+
+        <h2>Add Service Offer</h2>
+        <br />
+
+        <form method="post" action="#" th:action="@{/buy/services/add}">
+            <table>
+                <tr>
+                    <td>Ad Name:</td>
+                    <td><input type="text" th:field="${service.name}" /></td>
+                </tr>
+                <tr>
+                    <td>Service Description:</td>
+                    <td><input type="text" th:field="${service.description}" /></td>
+                </tr>
+                <tr>
+                    <td>Payment:</td>
+                    <td><input type="number" th:field="${service.payment}" /> $</td>
+                </tr>
+                <tr>
+                    <td>Submit:</td>
+                    <td><input type="submit" value="Submit" /></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

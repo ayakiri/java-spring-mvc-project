@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Add Vehicle Ad</title>
+        <link th:href="@{/style.css}" rel="stylesheet">
+    </head>
+
+    <body>
+        <div th:insert="headers.html::menu"> </div>
+
+        <h2>Add Vehicle Ad</h2>
+        <br />
+
+        <form method="post" action="#" th:action="@{/buy/vehicles/car/add}">
+            <table>
+                <tr>
+                    <td>Ad Name:</td>
+                    <td><input type="text" th:field="${car.name}" /></td>
+                </tr>
+                <tr>
+                    <td>Vehicle Make:</td>
+                    <td><input type="text" th:field="${car.make}" /></td>
+                </tr>
+                <tr>
+                    <td>Vehicle Description:</td>
+                    <td><input type="text" th:field="${car.description}" /></td>
+                </tr>
+                <tr>
+                    <td>Contact Information:</td>
+                    <td><input type="text" th:field="${car.contactInfo}" /></td>
+                </tr>
+                <tr>
+                    <td>Price:</td>
+                    <td><input type="number" th:field="${car.price}" /> $</td>
+                </tr>
+                <tr>
+                    <td>Submit:</td>
+                    <td><input type="submit" value="Submit" /></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Show Job Ads</title>
+        <link th:href="@{/style.css}" rel="stylesheet">
+    </head>
+
+    <body>
+        <div th:insert="headers.html::menu"> </div>
+
+        <h2>Jobs</h2>
+        <br />
+
+        <table>
+            <tbody>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Job Title</th>
+                <th>Description</th>
+                <th>Contact Information</th>
+                <th>Salary [$]</th>
+            </tr>
+            <tr th:each="job : ${jobs}">
+                <td th:text="${job.id}">. </td>
+                <td th:text="${job.name}"></td>
+                <td th:text="${job.jobTitle}"></td>
+                <td th:text="${job.description}"></td>
+                <td th:text="${job.contactInfo}"></td>
+                <td th:text="${job.salary}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
